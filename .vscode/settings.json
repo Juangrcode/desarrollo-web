@@ -1,0 +1,6 @@
+{
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.columnSelection": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.unfoldOnClickAfterEndOfLine": true
+}
