@@ -41,7 +41,7 @@ h1
   line-height: 1.5em;
   letter-spacing: -.2px;
   color: white;
-  margin: 110px 200px 150px 300px;
+  margin: 0px;
 
   /*text-transform: uppercase;    
   text-decoration: dashed;*/
@@ -50,12 +50,20 @@ h1
 .hero
 {
   height: 300px;
-  background-image: url('../imagenes/photojuan-edit.jpg');
+  /*background-image: url('../imagenes/photojuan-edit.jpg');*/
   background-color: #000000;
-  background-size: 400px 300px;
-  background-repeat: no-repeat;
-  background-position-x: right;
+  /*background-size: 400px 300px;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position-x: right;*/
+
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
 }
+.hero-image{
+  object-fit: contain;
+}
+
 .portfolio
 {
   background: #fafafe;
@@ -81,8 +89,40 @@ h1
   margin-left:auto ;*/
   padding: 20px;
   background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.project-date,
+.project-course,
+.project-url
+{
+  margin: 10px 0;
+}
+.project-description
+{
+  font-size: 20px;
+}
+.project-title
+{
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.project-strong
+{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h2
+{
+  color: #199389;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
 .hero-strong
 {
   color: #199389;
@@ -91,19 +131,212 @@ h1
 {
   width: 500px;
 }
-.project
-{
-  width: 500px;
-}
+
 .header
 {
-  background-color: #000000;
-  color: white;
+  background-color: #1b2127;
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   height: 50px;
+   align-items: center;
 }
 .header a
 {
   color: white;
   text-decoration: none;
+}
+
+.flexbox
+{
+   display: flex;
+  /* flex-wrap: nowrap; */
+   flex-wrap: wrap;
+   /*flex-direction: column; */
+}
+.box
+{
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid red;
+flex-direction: order;
+  flex-shrink: 0;
+
+}
+ol,
+ul
+{
+  margin: 0;
+  padding: 0%;
+  list-style: none;  
+}
+figure
+{
+  margin: 0;
+}
+.menu { /* .menu hereda de .header */
+  height: inherit;
+  
+  
+}
+
+.header ol { /* .header ol hereda de .menu */
+  display: flex;
+  height: inherit;
+}
+
+.header ol li { /* .header ol li hereda de .header ol */
+  height: inherit;
+}
+
+.header a { /* .header a hereda de .header ol li */
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.footer
+{
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer img
+{
+  vertical-align: middle;
+}
+.footer1
+{
+  display: flex;
+}
+
+.event
+{
+  border: 1px solid #000000;
+  margin: 10px;
+  width: 480px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4fbff;
+
+}
+.event-list
+{
+  display: flex;
+}
+.event img
+{
+  width: 480px;
+  height: 200px;
+  object-fit: fill;
+}
+.event-detail
+{
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+
+}
+.event-description
+{
+  text-align: left;
+}
+.event-url
+{
+  border: 1px solid;
+  padding: 5px 20px;
+  color:#000000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.event-list-title
+{
+  margin-left: 10px;
+}
+.contact
+{
+  background-color: #1b2127;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+
+.social-link
+{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  margin: 0 10px;
+}
+.social-link.twitter
+{
+  background-image: url('../imagenes/logo.jpeg');
+  background-size: 50px 50px;
+}
+.social-link.facebook
+{
+  background-image: url('../imagenes/logo.jpeg');
+  background-size: 50px 50px;
+}
+.social-link.github
+{
+  background-image: url('../imagenes/logo.jpeg');
+  background-size: 50px 50px;
+}
+.social-link.instagram
+{
+  background-image: url('../imagenes/logo.jpeg');
+  background-size: 50px 50px;
+}
+.form-email input
+{
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 5px 25px;
+  background-image: url('../imagenes/hanna.jpeg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y:center;
+  background-position-x: 5px;
+}
+.form-email button
+{
+  margin-top: 10px;
+  display: block;
+  background: transparent;
+  color:white;
+  padding: 5px 0px;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+}
+.form-email h3
+{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.container
+{
+  border:1px solid red;
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  height: inherit;
+  align-items: inherit;
 }
 
 
